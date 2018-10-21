@@ -1,12 +1,12 @@
 const Slider = {
     sliderCont  : document.getElementById("sliderContainer"),
-    preview     : document.getElementById("preview"),
+    previous     : document.getElementById("previous"),
     next        : document.getElementById("next"),
     list        : document.getElementById("images__list"),
     images      : ["image1.jpg","image2.jpg","image3.jpg","image4.jpg","image5.jpg"],
     $width      : document.getElementById("images__list").offsetWidth,
     move        : 0,
-    previewFun  : function () {  
+    previousFun  : function () {  
         (this.move === 0) ? this.move = -(this.list.offsetWidth) : true;
         this.move += this.sliderCont.clientWidth;
         this.list.style.left = this.move+"px";
@@ -38,6 +38,6 @@ Slider.next.addEventListener("click",function(){
     Slider.nextFun();
 });
 
-Slider.preview.addEventListener("click",function(){
-    Slider.previewFun();
+Slider.previous.addEventListener("click",function(){
+    Slider.previousFun();
 });
