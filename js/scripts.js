@@ -33,3 +33,11 @@ const Slider = {
     }
 }//Slider 
 Slider.loadImg();
+
+Slider.next.addEventListener("click",function(){
+    Slider.nextFun();
+});
+
+Slider.preview.addEventListener("click",function(){
+    Slider.previewFun();
+});
